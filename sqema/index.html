@@ -78,6 +78,11 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
 .why{display:grid;gap:16px}
 @media(min-width:720px){.why{grid-template-columns:1fr 1fr}}
 .why .item .b{font-weight:700;color:var(--navy)}
+.stats{display:grid;gap:18px;grid-template-columns:1fr 1fr}
+@media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stats .stat{background:var(--soft);border:1px solid var(--line);border-radius:var(--radius);padding:26px 18px;text-align:center}
+.stats .stat .num{display:block;font-weight:800;font-size:2.6rem;line-height:1.05;color:var(--green);letter-spacing:-1px}
+.stats .stat .lbl{display:block;margin-top:8px;font-size:.95rem;color:var(--muted)}
 .steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:16px}
 @media(min-width:720px){.steps{grid-template-columns:repeat(4,1fr)}}
 .steps li{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px}
@@ -161,6 +166,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
       <a href="https://tia.sts.com.ge/">ტრანსპორტის შეფასება</a>
       <a href="https://sts.com.ge/">sts.com.ge</a>
       <a href="tel:+995577155575">+995 577 15 55 75</a>
+      <a href="tel:+995551141484">+995 551 14 14 84</a>
     </nav>
   </div>
 </header>
@@ -236,7 +242,8 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
       <h2>სქემების ტიპები და საჭირო დოკუმენტები</h2>
       <div class="guide-note">
         <strong>ვინ ამტკიცებს:</strong> სქემას ამტკიცებს მერია და საპატრულო პოლიცია — STS ამზადებს დოკუმენტს და წარადგენს. <br>
-        <strong>დაჩქარებული ატვირთვა:</strong> დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის ატვირთვის საფასური +18% დღგ + ბანკის საკომისიო. ყველა ფასს ემატება 18% დღგ.
+        <strong>დაჩქარებული ატვირთვა:</strong> დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის ატვირთვის საფასური +18% დღგ + ბანკის საკომისიო. ყველა ფასს ემატება 18% დღგ. <br>
+        <strong>ფასების შესახებ:</strong> ქვემოთ მითითებული ფასები ოფიციალური სახელმწიფო საფასურია, რომელსაც ნებართვის მაძიებელი იხდის მერიასა და საპატრულო პოლიციაში — ისინი არ მოიცავს STS-ის მომსახურების საფასურს. STS-ის საფასურს, დაანგარიშებულს თქვენი პროექტისთვის, იმავე დღეს მიიღებთ, ხოლო მზა სქემას 48 საათში მოგაწვდით ან ავტვირთავთ შესაბამის ინსტანციებში.
       </div>
 
       <details class="scheme" id="scheme-1">
@@ -257,7 +264,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
             <div class="tier"><span class="d">3 დღეში</span><span class="p">1000₾ +18% დღგ</span></div>
             <div class="tier"><span class="d">10 დღეში</span><span class="p">500₾ +18% დღგ</span></div>
             <div class="tier"><span class="d">1 თვეში</span><span class="p">უფასო</span></div>
-            <p class="fine">დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური +18% დღგ + ბანკის საკომისიო.</p>
+            <p class="fine">მითითებული ფასები ოფიციალური სახელმწიფო საფასურია (მერია/საპატრულო პოლიცია) და არ მოიცავს STS-ის მომსახურების საფასურს — STS-ის საფასურს, დაანგარიშებულს თქვენი პროექტისთვის, იმავე დღეს მიიღებთ, ხოლო მზა სქემას 48 საათში მოგაწვდით ან ავტვირთავთ შესაბამის ინსტანციებში. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური +18% დღგ + ბანკის საკომისიო.</p>
           </div>
           <div class="cta-row">
             <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%201%20—%20მრავალბინიანი%20პროექტი">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
@@ -283,7 +290,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
             <div class="tier"><span class="d">3 დღეში</span><span class="p">1000₾ +18% დღგ</span></div>
             <div class="tier"><span class="d">10 დღეში</span><span class="p">500₾ +18% დღგ</span></div>
             <div class="tier"><span class="d">1 თვეში</span><span class="p">უფასო</span></div>
-            <p class="fine">დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური +18% დღგ + ბანკის საკომისიო.</p>
+            <p class="fine">მითითებული ფასები ოფიციალური სახელმწიფო საფასურია (მერია/საპატრულო პოლიცია) და არ მოიცავს STS-ის მომსახურების საფასურს — STS-ის საფასურს, დაანგარიშებულს თქვენი პროექტისთვის, იმავე დღეს მიიღებთ, ხოლო მზა სქემას 48 საათში მოგაწვდით ან ავტვირთავთ შესაბამის ინსტანციებში. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური +18% დღგ + ბანკის საკომისიო.</p>
           </div>
           <div class="cta-row">
             <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%202%20—%20ინდივიდუალური%20სახლი">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
@@ -308,7 +315,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
             <div class="tier"><span class="d">5 დღეში</span><span class="p">500₾</span></div>
             <div class="tier"><span class="d">10 დღეში</span><span class="p">300₾</span></div>
             <div class="tier"><span class="d">1 თვეში</span><span class="p">უფასო</span></div>
-            <p class="fine">ყველა ფასს ემატება 18% დღგ. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური + ბანკის საკომისიო.</p>
+            <p class="fine">მითითებული ფასები ოფიციალური სახელმწიფო საფასურია (მერია/საპატრულო პოლიცია) და არ მოიცავს STS-ის მომსახურების საფასურს — STS-ის საფასურს, დაანგარიშებულს თქვენი პროექტისთვის, იმავე დღეს მიიღებთ, ხოლო მზა სქემას 48 საათში მოგაწვდით ან ავტვირთავთ შესაბამის ინსტანციებში. ყველა ფასს ემატება 18% დღგ. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური + ბანკის საკომისიო.</p>
           </div>
           <p class="warn">⚠️ ამ ტიპს ერთვის დამატებითი ქვე-სექცია (გადახდის/ატვირთვის შემდეგ) — დეტალები დასაზუსტებელია. [დასაზუსტებელია]</p>
           <div class="cta-row">
@@ -332,7 +339,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
             <div class="tier"><span class="d">3 დღეში</span><span class="p">1000₾ +18% დღგ</span></div>
             <div class="tier"><span class="d">10 დღეში</span><span class="p">500₾ +18% დღგ</span></div>
             <div class="tier"><span class="d">1 თვეში</span><span class="p">უფასო</span></div>
-            <p class="fine">დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური +18% დღგ + ბანკის საკომისიო.</p>
+            <p class="fine">მითითებული ფასები ოფიციალური სახელმწიფო საფასურია (მერია/საპატრულო პოლიცია) და არ მოიცავს STS-ის მომსახურების საფასურს — STS-ის საფასურს, დაანგარიშებულს თქვენი პროექტისთვის, იმავე დღეს მიიღებთ, ხოლო მზა სქემას 48 საათში მოგაწვდით ან ავტვირთავთ შესაბამის ინსტანციებში. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური +18% დღგ + ბანკის საკომისიო.</p>
           </div>
           <div class="cta-row">
             <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%204%20—%20გაპის%20ეტაპი">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
@@ -368,7 +375,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
             <div class="tier"><span class="d">5 დღე</span><span class="p">500₾</span></div>
             <div class="tier"><span class="d">10 დღე</span><span class="p">300₾</span></div>
             <div class="tier"><span class="d">1 თვე</span><span class="p">უფასო</span></div>
-            <p class="fine">ყველა ფასს ემატება 18% დღგ. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური + ბანკის საკომისიო.</p>
+            <p class="fine">მითითებული ფასები ოფიციალური სახელმწიფო საფასურია (მერია/საპატრულო პოლიცია) და არ მოიცავს STS-ის მომსახურების საფასურს — STS-ის საფასურს, დაანგარიშებულს თქვენი პროექტისთვის, იმავე დღეს მიიღებთ, ხოლო მზა სქემას 48 საათში მოგაწვდით ან ავტვირთავთ შესაბამის ინსტანციებში. ყველა ფასს ემატება 18% დღგ. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური + ბანკის საკომისიო.</p>
           </div>
           <div class="cta-row">
             <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%205%20—%20ტექნიკის%20განთავსება">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
@@ -392,7 +399,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
             <div class="tier"><span class="d">3 დღეში</span><span class="p">1000₾ +18% დღგ</span></div>
             <div class="tier"><span class="d">10 დღეში</span><span class="p">500₾ +18% დღგ</span></div>
             <div class="tier"><span class="d">1 თვეში</span><span class="p">უფასო</span></div>
-            <p class="fine">დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური +18% დღგ + ბანკის საკომისიო.</p>
+            <p class="fine">მითითებული ფასები ოფიციალური სახელმწიფო საფასურია (მერია/საპატრულო პოლიცია) და არ მოიცავს STS-ის მომსახურების საფასურს — STS-ის საფასურს, დაანგარიშებულს თქვენი პროექტისთვის, იმავე დღეს მიიღებთ, ხოლო მზა სქემას 48 საათში მოგაწვდით ან ავტვირთავთ შესაბამის ინსტანციებში. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური +18% დღგ + ბანკის საკომისიო.</p>
           </div>
           <div class="cta-row">
             <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%206%20—%20გრგ%20/%20მრავალფუნქციური">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
@@ -427,7 +434,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
             <div class="tier"><span class="d">5 დღე</span><span class="p">500₾</span></div>
             <div class="tier"><span class="d">10 დღე</span><span class="p">300₾</span></div>
             <div class="tier"><span class="d">1 თვე</span><span class="p">უფასო</span></div>
-            <p class="fine">ყველა ფასს ემატება 18% დღგ. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური + ბანკის საკომისიო.</p>
+            <p class="fine">მითითებული ფასები ოფიციალური სახელმწიფო საფასურია (მერია/საპატრულო პოლიცია) და არ მოიცავს STS-ის მომსახურების საფასურს — STS-ის საფასურს, დაანგარიშებულს თქვენი პროექტისთვის, იმავე დღეს მიიღებთ, ხოლო მზა სქემას 48 საათში მოგაწვდით ან ავტვირთავთ შესაბამის ინსტანციებში. ყველა ფასს ემატება 18% დღგ. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური + ბანკის საკომისიო.</p>
           </div>
           <div class="cta-row">
             <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%207%20—%20მიწის%20ტრანშეა">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
@@ -462,7 +469,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
             <div class="tier"><span class="d">5 დღე</span><span class="p">500₾</span></div>
             <div class="tier"><span class="d">10 დღე</span><span class="p">300₾</span></div>
             <div class="tier"><span class="d">1 თვე</span><span class="p">უფასო</span></div>
-            <p class="fine">ყველა ფასს ემატება 18% დღგ. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური + ბანკის საკომისიო.</p>
+            <p class="fine">მითითებული ფასები ოფიციალური სახელმწიფო საფასურია (მერია/საპატრულო პოლიცია) და არ მოიცავს STS-ის მომსახურების საფასურს — STS-ის საფასურს, დაანგარიშებულს თქვენი პროექტისთვის, იმავე დღეს მიიღებთ, ხოლო მზა სქემას 48 საათში მოგაწვდით ან ავტვირთავთ შესაბამის ინსტანციებში. ყველა ფასს ემატება 18% დღგ. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური + ბანკის საკომისიო.</p>
           </div>
           <p class="warn">⚠️ ამ ტიპს ერთვის დამატებითი ქვე-სექცია (გადახდის/ატვირთვის შემდეგ) — დეტალები დასაზუსტებელია. [დასაზუსტებელია]</p>
           <div class="cta-row">
@@ -477,11 +484,11 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
   <section>
     <div class="wrap">
       <h2>რატომ STS</h2>
-      <div class="why">
-        <div class="item"><div><span class="b">დადასტურებული გამოცდილება</span> — წლიური ხელშეკრულებები მსხვილ კომუნალურ და ინფრასტრუქტურულ კომპანიებთან</div></div>
-        <div class="item"><div><span class="b">სწრაფი მიწოდება და ხელმისაწვდომი ფასი</span></div></div>
-        <div class="item"><div><span class="b">დასამტკიცებლად მზა დოკუმენტი</span> — მინიმალური შენიშვნებით</div></div>
-        <div class="item"><div><span class="b">პროფესიონალური ხელსაწყოები და გამოცდილი გუნდი</span></div></div>
+      <div class="stats">
+        <div class="stat"><span class="num">[2018]</span><span class="lbl">წლიდან — გამოცდილება</span></div>
+        <div class="stat"><span class="num">[500+]</span><span class="lbl">დამზადებული სქემა</span></div>
+        <div class="stat"><span class="num">[100%]</span><span class="lbl">დამტკიცების სტატისტიკა</span></div>
+        <div class="stat"><span class="num">[48 სთ]</span><span class="lbl">შესრულების ვადა</span></div>
       </div>
     </div>
   </section>
@@ -508,6 +515,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
       </div>
       <div class="contacts">
         <span>☎ <a href="tel:+995577155575">+995 577 15 55 75</a></span>
+        <span>☎ <a href="tel:+995551141484">+995 551 14 14 84</a></span>
         <span>✉ <a href="mailto:info@sts.com.ge">info@sts.com.ge</a></span>
       </div>
     </div>
@@ -538,8 +546,9 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
     <div>
       <h4>STS — Smart Transportation Solutions</h4>
       <address class="nap">
-        3/17 Ana Politkovskaia St, Tbilisi 0168<br>
+        ანა პოლიტკოვსკაიას 3, თბილისი 0186<br>
         ☎ <a href="tel:+995577155575" style="display:inline">+995 577 15 55 75</a><br>
+        ☎ <a href="tel:+995551141484" style="display:inline">+995 551 14 14 84</a><br>
         ✉ <a href="mailto:info@sts.com.ge" style="display:inline">info@sts.com.ge</a>
       </address>
     </div>
@@ -570,9 +579,9 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
   "email": "info@sts.com.ge",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "3/17 Ana Politkovskaia St",
-    "addressLocality": "Tbilisi",
-    "postalCode": "0168",
+    "streetAddress": "ანა პოლიტკოვსკაიას 3",
+    "addressLocality": "თბილისი",
+    "postalCode": "0186",
     "addressCountry": "GE"
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 41.7213178, "longitude": 44.7142103 },

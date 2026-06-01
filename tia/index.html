@@ -80,6 +80,11 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
 @media(min-width:720px){.why{grid-template-columns:1fr 1fr}}
 .why .item{display:flex;gap:14px;align-items:flex-start}
 .why .item .b{font-weight:700;color:var(--navy)}
+.stats{display:grid;gap:18px;grid-template-columns:1fr 1fr}
+@media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stats .stat{background:var(--soft);border:1px solid var(--line);border-radius:var(--radius);padding:26px 18px;text-align:center}
+.stats .stat .num{display:block;font-weight:800;font-size:2.6rem;line-height:1.05;color:var(--green);letter-spacing:-1px}
+.stats .stat .lbl{display:block;margin-top:8px;font-size:.95rem;color:var(--muted)}
 /* process */
 .steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:16px}
 @media(min-width:720px){.steps{grid-template-columns:repeat(4,1fr)}}
@@ -124,6 +129,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
       <a href="https://sqema.sts.com.ge/">საგზაო სქემა</a>
       <a href="https://sts.com.ge/">sts.com.ge</a>
       <a href="tel:+995577155575">+995 577 15 55 75</a>
+      <a href="tel:+995551141484">+995 551 14 14 84</a>
     </nav>
   </div>
 </header>
@@ -177,12 +183,11 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
   <section>
     <div class="wrap">
       <h2>რატომ STS</h2>
-      <div class="why">
-        <div class="item"><div><span class="b">სწრაფი მიწოდება</span> — მზა შეფასება [X სამუშაო დღეში]</div></div>
-        <div class="item"><div><span class="b">ხელმისაწვდომი ფასი</span> ბაზარზე საუკეთესო ფასი-ხარისხის თანაფარდობით</div></div>
-        <div class="item"><div><span class="b">საერთაშორისო დონის გამოცდილება</span> — პროექტები ADB-სა და GIZ-თან</div></div>
-        <div class="item"><div><span class="b">პროფესიონალური ხელსაწყოები</span> — PTV VISSIM, PTV VISUM, ArcGIS</div></div>
-        <div class="item"><div><span class="b">გამოცდილი გუნდი</span> — ტრანსპორტის ინჟინრები და დაგეგმარების სპეციალისტები</div></div>
+      <div class="stats">
+        <div class="stat"><span class="num">2018</span><span class="lbl">წლიდან — გამოცდილება</span></div>
+        <div class="stat"><span class="num">500+</span><span class="lbl">დამტკიცებული ტზშ</span></div>
+        <div class="stat"><span class="num">100%</span><span class="lbl">დამტკიცების სტატისტიკა</span></div>
+        <div class="stat"><span class="num">48 სთ</span><span class="lbl">შესრულების ვადა</span></div>
       </div>
     </div>
   </section>
@@ -209,6 +214,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
       </div>
       <div class="contacts">
         <span>☎ <a href="tel:+995577155575">+995 577 15 55 75</a></span>
+        <span>☎ <a href="tel:+995551141484">+995 551 14 14 84</a></span>
         <span>✉ <a href="mailto:info@sts.com.ge">info@sts.com.ge</a></span>
       </div>
     </div>
@@ -243,8 +249,9 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
     <div>
       <h4>STS — Smart Transportation Solutions</h4>
       <address class="nap">
-        3/17 Ana Politkovskaia St, Tbilisi 0168<br>
+        ანა პოლიტკოვსკაიას 3, თბილისი 0186<br>
         ☎ <a href="tel:+995577155575" style="display:inline">+995 577 15 55 75</a><br>
+        ☎ <a href="tel:+995551141484" style="display:inline">+995 551 14 14 84</a><br>
         ✉ <a href="mailto:info@sts.com.ge" style="display:inline">info@sts.com.ge</a>
       </address>
     </div>
@@ -275,9 +282,9 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
   "email": "info@sts.com.ge",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "3/17 Ana Politkovskaia St",
-    "addressLocality": "Tbilisi",
-    "postalCode": "0168",
+    "streetAddress": "ანა პოლიტკოვსკაიას 3",
+    "addressLocality": "თბილისი",
+    "postalCode": "0186",
     "addressCountry": "GE"
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 41.7213178, "longitude": 44.7142103 },
