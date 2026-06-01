@@ -7,8 +7,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 `Sqema/` is the **STS Georgian service pages** project — two self-contained static
 Georgian web pages for STS, a Tbilisi transport consultancy: a Transport Impact
 Assessment (TIA) page and a road-scheme (საგზაო სქემა) page. SEO assets for
-`sts.com.ge` subdomains. **Not built yet** — only the spec markdown files exist;
-the HTML/CSS/JS deliverables are still to be produced.
+`sts.com.ge` subdomains.
+
+## Layout (as built)
+
+Each page is the index of its own subdomain; each folder is an independent deploy root:
+
+```
+tia/      → tia.sts.com.ge    index.html · robots.txt · sitemap.xml · fonts/
+sqema/    → sqema.sts.com.ge  index.html · robots.txt · sitemap.xml · fonts/
+README.md → deploy / DNS / Search Console steps + open items
+```
+
+CSS is **inlined** in each page's `<head>` (no shared `styles.css`) — this is the
+SEO spec's performance preference (§10) and the clean way to share styling across two
+separate subdomain roots. The Georgian font (Noto Sans Georgian) is self-hosted under
+each `fonts/` as subsetted woff2 (georgian + latin + latin-ext, one variable file per
+subset covering weights 400–700), preloaded with `font-display: swap`.
 
 ## Git boundary (important)
 
@@ -37,11 +52,14 @@ later rules as overriding earlier ones **on SEO matters**:
   scheme-page checker is **progressive enhancement only**: its JS may show/hide or
   restyle content, but must never be the *sole source* of it. Validate by rendering
   with JS disabled — nothing may disappear.
-- **Single source of truth for scheme data:** build one JS object `SCHEMES` (8 types,
-  per build spec §5). Both the interactive checker **and** the static accordion guide
-  render from this same object — never duplicate the data by hand.
-- **Vanilla only:** plain HTML + CSS + vanilla JS. No framework, no build step, no
-  browser-storage APIs. One stylesheet shared by both pages. Editable by hand.
+- **Scheme data lives in the HTML, once.** The 8 scheme types are hand-authored
+  `<details class="scheme" id="scheme-N">` blocks in `sqema/index.html` (the source of
+  truth, satisfying Rule #1). The checker is a button grid of anchor links to those
+  blocks; its tiny inline JS only opens the chosen block and collapses the rest. To
+  change a type's documents or pricing, edit its block — the checker needs no changes.
+  Pricing models (build spec §5): PERMANENT (types 1,2,4,6), FENCE_TEMP (3), TEMP_TIERED (5,7,8).
+- **Vanilla only:** plain HTML + inlined CSS + a small inline vanilla JS. No framework,
+  no build step, no browser-storage APIs. Editable by hand.
 - **Georgian only, copy verbatim:** all visible text in Georgian; do not rewrite or
   re-translate the supplied copy. Use a Georgian-friendly font (e.g. Noto Sans Georgian).
 - **Do not fabricate** prices, phone, email, or legal thresholds. Leave clear `[ ... ]`

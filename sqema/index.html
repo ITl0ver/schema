@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>საგზაო მოძრაობის ორგანიზების სქემა — დროებითი/მუდმივი | STS</title>
+<meta name="description" content="საგზაო მოძრაობის ორგანიზების სქემა (დროებითი და მუდმივი) მშენებლობისა და სამუშაოებისთვის. დასამტკიცებლად მზა, სწრაფად.">
+<link rel="canonical" href="https://sqema.sts.com.ge/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="alternate" hreflang="ka" href="https://sqema.sts.com.ge/">
+<link rel="alternate" hreflang="x-default" href="https://sqema.sts.com.ge/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ka_GE">
+<meta property="og:title" content="საგზაო მოძრაობის ორგანიზების სქემა — დროებითი/მუდმივი | STS">
+<meta property="og:description" content="საგზაო მოძრაობის ორგანიზების სქემა (დროებითი და მუდმივი) მშენებლობისა და სამუშაოებისთვის. დასამტკიცებლად მზა, სწრაფად.">
+<meta property="og:url" content="https://sqema.sts.com.ge/">
+<meta property="og:image" content="https://sts.com.ge/wp-content/uploads/2025/05/STS-Logo-Dark-Version-v2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/fonts/ng-georgian.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Noto Sans Georgian';font-weight:400 700;font-display:swap;src:url(/fonts/ng-georgian.woff2) format('woff2');unicode-range:U+0589,U+10A0-10FF,U+1C90-1CBA,U+1CBD-1CBF,U+205A,U+2D00-2D2F,U+2E31}
+@font-face{font-family:'Noto Sans Georgian';font-weight:400 700;font-display:swap;src:url(/fonts/ng-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Noto Sans Georgian';font-weight:400 700;font-display:swap;src:url(/fonts/ng-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{--bg:#fff;--ink:#1f2430;--muted:#5b6472;--line:#e7e9ee;--gold:#d5c788;--gold-dk:#9a8434;--navy:#20293a;--soft:#f6f4ee;--radius:14px;--maxw:1080px}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Noto Sans Georgian',system-ui,'BPG Nino','Sylfaen',sans-serif;font-size:17px;line-height:1.65;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+a{color:var(--gold-dk)}
+h1,h2,h3{line-height:1.25;color:var(--navy);margin:0 0 .5em}
+h1{font-size:clamp(1.6rem,4.2vw,2.5rem)}
+h2{font-size:clamp(1.35rem,3vw,1.9rem);margin-top:0}
+h3{font-size:1.12rem}
+p{margin:0 0 1rem}
+section{padding:46px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+/* header */
+.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:16px}
+.brand{font-weight:700;font-size:1.35rem;letter-spacing:.5px;color:var(--navy);text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.brand .dot{width:12px;height:12px;border-radius:3px;background:var(--gold);display:inline-block}
+.nav-links{display:flex;gap:18px;align-items:center;font-size:.95rem}
+.nav-links a{color:var(--muted);text-decoration:none}
+.nav-links a:hover{color:var(--navy)}
+@media(max-width:640px){.nav-links{display:none}}
+/* hero */
+.hero{background:linear-gradient(180deg,var(--soft),#fff);border-bottom:1px solid var(--line)}
+.hero .wrap{padding-top:54px;padding-bottom:54px}
+.eyebrow{display:inline-block;font-size:.82rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-dk);margin-bottom:14px}
+.hero p.sub{font-size:1.18rem;color:var(--muted);max-width:52ch}
+/* CTA */
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:var(--radius);font-weight:700;font-size:1.02rem;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:transform .06s ease,box-shadow .2s ease}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{box-shadow:0 8px 22px rgba(32,41,58,.22)}
+.btn-call{background:var(--gold);color:var(--navy)}
+.btn-call:hover{box-shadow:0 8px 22px rgba(213,199,136,.5)}
+.btn-ghost{background:#fff;color:var(--navy);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--gold)}
+/* generic lists */
+ul.checks{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+ul.checks li{position:relative;padding-left:32px}
+ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:16px;border-radius:50%;background:var(--gold);box-shadow:inset 0 0 0 4px #fff,0 0 0 1px var(--gold-dk)}
+.explainer{display:grid;gap:16px}
+@media(min-width:720px){.explainer{grid-template-columns:1fr 1fr}}
+.explainer .card{background:var(--soft);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.explainer .card h3{margin-top:0;display:flex;align-items:center;gap:10px}
+.why{display:grid;gap:16px}
+@media(min-width:720px){.why{grid-template-columns:1fr 1fr}}
+.why .item .b{font-weight:700;color:var(--navy)}
+.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:16px}
+@media(min-width:720px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps li{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px}
+.steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;margin-bottom:12px}
+/* badges */
+.badge{display:inline-block;font-size:.78rem;padding:3px 11px;border-radius:999px;font-weight:700;white-space:nowrap}
+.badge.perm{background:#e8edf7;color:#2b3a5a}
+.badge.temp{background:#fff4d6;color:#7a5b00}
+/* checker */
+.checker{background:var(--soft)}
+.pick-grid{display:grid;gap:10px;grid-template-columns:1fr;margin-top:6px}
+@media(min-width:560px){.pick-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.pick-grid{grid-template-columns:1fr 1fr 1fr 1fr}}
+.pick{display:flex;align-items:center;min-height:60px;padding:12px 16px;background:#fff;border:2px solid var(--line);border-radius:var(--radius);color:var(--navy);text-decoration:none;font-weight:700;font-size:.98rem;line-height:1.3;transition:border-color .15s,box-shadow .15s}
+.pick:hover{border-color:var(--gold)}
+.pick.active{border-color:var(--gold-dk);box-shadow:0 6px 18px rgba(154,132,52,.18)}
+.pick .n{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.9rem;margin-right:12px}
+.checker-hint{color:var(--muted);margin-top:14px;font-size:.95rem}
+/* scheme guide */
+.guide-note{background:#fff;border:1px dashed var(--gold-dk);border-radius:var(--radius);padding:14px 18px;color:var(--muted);font-size:.93rem;margin-bottom:18px}
+.scheme{border:1px solid var(--line);border-radius:var(--radius);background:#fff;margin-bottom:14px;overflow:hidden;scroll-margin-top:84px}
+.scheme>summary{cursor:pointer;list-style:none;padding:18px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.scheme>summary::-webkit-details-marker{display:none}
+.scheme>summary::after{content:"+";margin-left:auto;font-size:1.5rem;color:var(--gold-dk);line-height:1}
+.scheme[open]>summary::after{content:"–"}
+.scheme[open]>summary{border-bottom:1px solid var(--line)}
+.scheme .s-title{font-weight:700;color:var(--navy);font-size:1.08rem}
+.scheme .s-num{flex:0 0 auto;width:30px;height:30px;border-radius:8px;background:var(--navy);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:700}
+.scheme .body{padding:18px 20px}
+.scheme:target{border-color:var(--gold-dk)}
+.kv{margin:0 0 14px}
+.kv .k{font-weight:700;color:var(--navy)}
+.doc-list{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:10px}
+.doc-list li{display:flex;gap:10px;align-items:flex-start;padding-left:0}
+.tag{flex:0 0 auto;font-size:.72rem;font-weight:700;padding:2px 9px;border-radius:999px;margin-top:2px}
+.tag.req{background:#e6f4ea;color:#1d7a3e}
+.tag.opt{background:#eef0f4;color:#5b6472}
+.prices{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+.prices h4{margin:0 0 8px;color:var(--navy);font-size:.98rem}
+.tier{display:flex;justify-content:space-between;gap:14px;padding:5px 0;border-bottom:1px dashed var(--line)}
+.tier:last-child{border-bottom:0}
+.tier .d{color:var(--muted)}
+.tier .p{font-weight:700;color:var(--navy);white-space:nowrap}
+.band-label{font-weight:700;color:var(--gold-dk);margin:10px 0 4px;font-size:.92rem}
+.fine{font-size:.82rem;color:var(--muted);margin-top:8px}
+.scheme .cta-row{margin-top:4px}
+.warn{background:#fff8e6;border:1px solid #f0d98a;border-radius:10px;padding:10px 14px;color:#7a5b00;font-size:.9rem;margin-top:4px}
+/* footer band */
+.band{background:var(--navy);color:#eef0f4;border:0}
+.band h2{color:#fff}
+.band p{color:#c7cdd9}
+.band .contacts{margin-top:18px;display:flex;flex-wrap:wrap;gap:18px 28px;font-size:1.02rem}
+.band .contacts a{color:var(--gold);text-decoration:none;font-weight:700}
+/* faq */
+.faq details{border:1px solid var(--line);border-radius:var(--radius);margin-bottom:12px;background:#fff;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:18px 20px;font-weight:700;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.5rem;color:var(--gold-dk);line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 20px 18px;color:var(--muted)}
+/* footer */
+.site-footer{background:#161c28;color:#aeb6c4;font-size:.95rem;padding:40px 0}
+.site-footer .wrap{display:grid;gap:22px}
+@media(min-width:720px){.site-footer .wrap{grid-template-columns:1.4fr 1fr 1fr}}
+.site-footer h4{color:#fff;margin:0 0 12px;font-size:1rem}
+.site-footer a{color:#cfd5e0;text-decoration:none;display:block;margin-bottom:8px}
+.site-footer a:hover{color:var(--gold)}
+.site-footer .nap{font-style:normal}
+.site-footer .legal{border-top:1px solid #2a3242;margin-top:8px;padding-top:18px;color:#7f8a9c}
+.muted-note{color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="https://sts.com.ge/"><span class="dot"></span>STS</a>
+    <nav class="nav-links" aria-label="მთავარი ნავიგაცია">
+      <a href="https://tia.sts.com.ge/">ტრანსპორტის შეფასება</a>
+      <a href="https://sts.com.ge/">sts.com.ge</a>
+      <a href="tel:+995599120755">+995 599 120 755</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">STS — Smart Transportation Solutions</span>
+      <h1>საგზაო მოძრაობის ორგანიზების სქემა — დროებითი და მუდმივი</h1>
+      <p class="sub">დასამტკიცებლად მზა საგზაო მოძრაობის ორგანიზების სქემა სამშენებლო სამუშაოების, კომუნიკაციების მოწყობისა და ღონისძიებებისთვის — სწრაფად და ხელმისაწვდომად.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=საგზაო%20მოძრაობის%20ორგანიზების%20სქემა%20—%20შეთავაზების%20მოთხოვნა">შეთავაზების მიღება</a>
+        <a class="btn btn-call" href="tel:+995599120755">დარეკვა</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>როდის გჭირდებათ საგზაო სქემა?</h2>
+      <p>ნებისმიერი სამუშაო, რომელიც ზღუდავს ან ცვლის საგზაო მოძრაობას, საჭიროებს დამტკიცებულ სქემას:</p>
+      <div class="explainer">
+        <div class="card">
+          <h3><span class="badge temp">დროებითი</span></h3>
+          <p><strong>დროებითი სქემა</strong> (იგივე საგზაო მოძრაობის ორგანიზების დროებითი სქემა) — სამშენებლო მოედნები, საგზაო და კომუნიკაციების სამუშაოები (წყალი, გაზი, ელ-ენერგია, ინტერნეტი), გზის სრული ან ნაწილობრივი გადაკეტვა, ღონისძიებები.</p>
+        </div>
+        <div class="card">
+          <h3><span class="badge perm">მუდმივი</span></h3>
+          <p><strong>მუდმივი სქემა</strong> (იგივე საგზაო მოძრაობის ორგანიზების მუდმივი სქემა) — ახალი გზების, გზაჯვარედინების, შესასვლელებისა და პარკირების მონიშვნა, საგზაო ნიშნები და შუქნიშნები.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>რას მოიცავს</h2>
+      <ul class="checks">
+        <li>ობიექტის/მონაკვეთის დათვალიერება და გაზომვა</li>
+        <li>სქემის შემუშავება მოქმედი სტანდარტების მიხედვით</li>
+        <li>საგზაო ნიშნების, ჰორიზონტალური მონიშვნისა და შემოღობვის გეგმა</li>
+        <li>დოკუმენტის მომზადება მუნიციპალიტეტში ან საავტომობილო გზების დეპარტამენტში დასამტკიცებლად</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="checker">
+    <div class="wrap">
+      <h2>რომელი სქემა გჭირდებათ?</h2>
+      <p class="muted-note">აირჩიეთ სამუშაოს ტიპი — გაჩვენებთ, რა დოკუმენტებია საჭირო, ვინ ამტკიცებს და რა ღირს. პერსონალურ მონაცემებს არ ვაგროვებთ.</p>
+      <nav class="pick-grid" aria-label="სქემის ტიპის არჩევა">
+        <a class="pick" href="#scheme-1"><span class="n">1</span>მრავალბინიანი პროექტი</a>
+        <a class="pick" href="#scheme-2"><span class="n">2</span>ინდივიდუალური სახლი</a>
+        <a class="pick" href="#scheme-3"><span class="n">3</span>სამშენებლო ღობე</a>
+        <a class="pick" href="#scheme-4"><span class="n">4</span>გაპის ეტაპი</a>
+        <a class="pick" href="#scheme-5"><span class="n">5</span>ტექნიკის განთავსება/გადაკეტვა</a>
+        <a class="pick" href="#scheme-6"><span class="n">6</span>გრგ / მრავალფუნქციური</a>
+        <a class="pick" href="#scheme-7"><span class="n">7</span>მიწის ტრანშეის გაჭრა</a>
+        <a class="pick" href="#scheme-8"><span class="n">8</span>კომუნიკაციები</a>
+      </nav>
+      <p class="checker-hint">↓ აირჩიეთ ტიპი ან გადაახვიეთ — ყველა ტიპი დეტალურადაა აღწერილი ქვემოთ.</p>
+    </div>
+  </section>
+
+  <section id="guide">
+    <div class="wrap">
+      <h2>სქემების ტიპები და საჭირო დოკუმენტები</h2>
+      <div class="guide-note">
+        <strong>ვინ ამტკიცებს:</strong> სქემას ამტკიცებს მერია და საპატრულო პოლიცია — STS ამზადებს დოკუმენტს და წარადგენს. <br>
+        <strong>დაჩქარებული ატვირთვა:</strong> დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის ატვირთვის საფასური +18% დღგ + ბანკის საკომისიო. ყველა ფასს ემატება 18% დღგ.
+      </div>
+
+      <details class="scheme" id="scheme-1">
+        <summary><span class="s-num">1</span><span class="s-title">მრავალბინიანი პროექტის შეთანხმება</span> <span class="badge perm">მუდმივი</span></summary>
+        <div class="body">
+          <p class="kv"><span class="k">ვინ ამტკიცებს:</span> მერია და საპატრულო პოლიცია — STS ამზადებს და წარადგენს.</p>
+          <h4>საჭირო მასალები</h4>
+          <ul class="doc-list">
+            <li><span class="tag req">სავალდებულო</span> მშენებლობის პროექტი (ე.წ. მოპ), DWG</li>
+            <li><span class="tag req">სავალდებულო</span> ტერიტორიის დეტალური გეგმა (dwg, pdf) — 68-127 დადგენილების ცვლილებით, ტროტუარები შიდა გეგმარებაში და საკადასტროს მიმდებარედ</li>
+            <li><span class="tag req">სავალდებულო</span> საკადასტროს მიმდებარედ ტოპოგრაფიული გეგმა (DWG)</li>
+            <li><span class="tag opt">სურვილისამებრ</span> დენდროლოგის ფაილი (არსებობის შემთხვევაში)</li>
+            <li><span class="tag req">სავალდებულო</span> პარკირების რაოდენობა — ტექსტი: რამდენი მიწისქვეშ / რამდენი მიწის ზემოთ</li>
+            <li><span class="tag req">სავალდებულო</span> არსებული სიტუაციის ფოტო/ვიდეო + 3D რენდერი</li>
+          </ul>
+          <div class="prices">
+            <h4>ვადა და ფასი</h4>
+            <div class="tier"><span class="d">3 დღეში</span><span class="p">1000₾ +18% დღგ</span></div>
+            <div class="tier"><span class="d">10 დღეში</span><span class="p">500₾ +18% დღგ</span></div>
+            <div class="tier"><span class="d">1 თვეში</span><span class="p">უფასო</span></div>
+            <p class="fine">დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური +18% დღგ + ბანკის საკომისიო.</p>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%201%20—%20მრავალბინიანი%20პროექტი">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
+            <a class="btn btn-call" href="tel:+995599120755">დარეკვა</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="scheme" id="scheme-2">
+        <summary><span class="s-num">2</span><span class="s-title">ინდივიდუალური სახლის პროექტის შეთანხმება</span> <span class="badge perm">მუდმივი</span></summary>
+        <div class="body">
+          <p class="kv"><span class="k">ვინ ამტკიცებს:</span> მერია და საპატრულო პოლიცია — STS ამზადებს და წარადგენს.</p>
+          <h4>საჭირო მასალები</h4>
+          <ul class="doc-list">
+            <li><span class="tag opt">სურვილისამებრ</span> მშენებლობის პროექტი (მოპ), DWG</li>
+            <li><span class="tag req">სავალდებულო</span> ტერიტორიის დეტალური გეგმა (dwg, pdf) — 68-127 დადგენილებით, ტროტუარები</li>
+            <li><span class="tag req">სავალდებულო</span> საკადასტროს ტოპოგრაფიული გეგმა (DWG)</li>
+            <li><span class="tag opt">სურვილისამებრ</span> დენდროლოგის ფაილი</li>
+            <li><span class="tag opt">სურვილისამებრ</span> არსებული სიტუაციის ფოტო/ვიდეო + 3D რენდერი</li>
+          </ul>
+          <div class="prices">
+            <h4>ვადა და ფასი</h4>
+            <div class="tier"><span class="d">3 დღეში</span><span class="p">1000₾ +18% დღგ</span></div>
+            <div class="tier"><span class="d">10 დღეში</span><span class="p">500₾ +18% დღგ</span></div>
+            <div class="tier"><span class="d">1 თვეში</span><span class="p">უფასო</span></div>
+            <p class="fine">დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური +18% დღგ + ბანკის საკომისიო.</p>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%202%20—%20ინდივიდუალური%20სახლი">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
+            <a class="btn btn-call" href="tel:+995599120755">დარეკვა</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="scheme" id="scheme-3">
+        <summary><span class="s-num">3</span><span class="s-title">სამშენებლო ღობის მოწყობის სქემა</span> <span class="badge temp">დროებითი</span></summary>
+        <div class="body">
+          <p class="kv"><span class="k">ვინ ამტკიცებს:</span> მერია და საპატრულო პოლიცია — STS ამზადებს და წარადგენს.</p>
+          <h4>საჭირო მასალები</h4>
+          <ul class="doc-list">
+            <li><span class="tag req">სავალდებულო</span> მშენებლობის პროექტი (მოპ), DWG</li>
+            <li><span class="tag req">სავალდებულო</span> საპროექტო ტერიტორიის ტოპო</li>
+            <li><span class="tag req">სავალდებულო</span> არსებული სიტუაციის ფოტო/ვიდეო + 3D რენდერი</li>
+          </ul>
+          <div class="prices">
+            <h4>ვადა და ფასი (1 კვირაზე მეტი ხანგრძლივობა)</h4>
+            <div class="tier"><span class="d">1 დღეში</span><span class="p">700₾</span></div>
+            <div class="tier"><span class="d">5 დღეში</span><span class="p">500₾</span></div>
+            <div class="tier"><span class="d">10 დღეში</span><span class="p">300₾</span></div>
+            <div class="tier"><span class="d">1 თვეში</span><span class="p">უფასო</span></div>
+            <p class="fine">ყველა ფასს ემატება 18% დღგ. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური + ბანკის საკომისიო.</p>
+          </div>
+          <p class="warn">⚠️ ამ ტიპს ერთვის დამატებითი ქვე-სექცია (გადახდის/ატვირთვის შემდეგ) — დეტალები დასაზუსტებელია. [დასაზუსტებელია]</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%203%20—%20სამშენებლო%20ღობე">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
+            <a class="btn btn-call" href="tel:+995599120755">დარეკვა</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="scheme" id="scheme-4">
+        <summary><span class="s-num">4</span><span class="s-title">გაპის ეტაპი</span> <span class="badge perm">მუდმივი</span></summary>
+        <div class="body">
+          <p class="kv"><span class="k">ვინ ამტკიცებს:</span> მერია და საპატრულო პოლიცია — STS ამზადებს და წარადგენს.</p>
+          <h4>საჭირო მასალები</h4>
+          <ul class="doc-list">
+            <li><span class="tag req">სავალდებულო</span> საპროექტო ტერიტორიის გენგეგმა და ტოპო, სამანქანო შესასვლელის მითითებით</li>
+            <li><span class="tag req">სავალდებულო</span> არსებული სიტუაციის ფოტო/ვიდეო + 3D რენდერი</li>
+          </ul>
+          <div class="prices">
+            <h4>ვადა და ფასი</h4>
+            <div class="tier"><span class="d">3 დღეში</span><span class="p">1000₾ +18% დღგ</span></div>
+            <div class="tier"><span class="d">10 დღეში</span><span class="p">500₾ +18% დღგ</span></div>
+            <div class="tier"><span class="d">1 თვეში</span><span class="p">უფასო</span></div>
+            <p class="fine">დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური +18% დღგ + ბანკის საკომისიო.</p>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%204%20—%20გაპის%20ეტაპი">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
+            <a class="btn btn-call" href="tel:+995599120755">დარეკვა</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="scheme" id="scheme-5">
+        <summary><span class="s-num">5</span><span class="s-title">ტექნიკის განთავსება / გადაკეტვა</span> <span class="badge temp">დროებითი</span></summary>
+        <div class="body">
+          <p class="kv"><span class="k">ვინ ამტკიცებს:</span> მერია და საპატრულო პოლიცია — STS ამზადებს და წარადგენს.</p>
+          <h4>საჭირო მასალები</h4>
+          <ul class="doc-list">
+            <li><span class="tag req">სავალდებულო</span> ტექნიკის ლოკაცია — ნახაზზე სად დგება ტექნიკა და მისი გაბარიტები (1 ფაილი, მაქს. 10MB)</li>
+            <li><span class="tag req">სავალდებულო</span> რა ვადით განთავსდება ტექნიკა — ტექსტი (მაგ. კონკრეტული თარიღები/სიხშირე)</li>
+            <li><span class="tag req">სავალდებულო</span> არსებული სიტუაციის ფოტო/ვიდეო + 3D რენდერი</li>
+          </ul>
+          <div class="prices">
+            <h4>ვადა და ფასი — ხანგრძლივობის მიხედვით</h4>
+            <div class="band-label">12 საათამდე</div>
+            <div class="tier"><span class="d">1 დღე</span><span class="p">300₾</span></div>
+            <div class="tier"><span class="d">5 დღე</span><span class="p">150₾</span></div>
+            <div class="tier"><span class="d">10 დღე</span><span class="p">100₾</span></div>
+            <div class="tier"><span class="d">1 თვე</span><span class="p">უფასო</span></div>
+            <div class="band-label">1 კვირამდე (7 დღე)</div>
+            <div class="tier"><span class="d">1 დღე</span><span class="p">500₾</span></div>
+            <div class="tier"><span class="d">5 დღე</span><span class="p">300₾</span></div>
+            <div class="tier"><span class="d">10 დღე</span><span class="p">150₾</span></div>
+            <div class="tier"><span class="d">1 თვე</span><span class="p">უფასო</span></div>
+            <div class="band-label">1 კვირაზე მეტი</div>
+            <div class="tier"><span class="d">1 დღე</span><span class="p">700₾</span></div>
+            <div class="tier"><span class="d">5 დღე</span><span class="p">500₾</span></div>
+            <div class="tier"><span class="d">10 დღე</span><span class="p">300₾</span></div>
+            <div class="tier"><span class="d">1 თვე</span><span class="p">უფასო</span></div>
+            <p class="fine">ყველა ფასს ემატება 18% დღგ. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური + ბანკის საკომისიო.</p>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%205%20—%20ტექნიკის%20განთავსება">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
+            <a class="btn btn-call" href="tel:+995599120755">დარეკვა</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="scheme" id="scheme-6">
+        <summary><span class="s-num">6</span><span class="s-title">გრგ, მრავალფუნქციური კომპლექსი</span> <span class="badge perm">მუდმივი</span></summary>
+        <div class="body">
+          <p class="kv"><span class="k">ვინ ამტკიცებს:</span> მერია და საპატრულო პოლიცია — STS ამზადებს და წარადგენს.</p>
+          <h4>საჭირო მასალები</h4>
+          <ul class="doc-list">
+            <li><span class="tag req">სავალდებულო</span> გრგ-ს დეტალური გენგეგმა (dwg, pdf) — 68-127 დადგენილებით, ტროტუარები შიდა გეგმარებაში და საკადასტროს მიმდებარედ</li>
+            <li><span class="tag opt">სურვილისამებრ</span> გრგ-ს არეალის ტოპოგრაფიული გეგმა (DWG) (არსებობის შემთხვევაში)</li>
+            <li><span class="tag req">სავალდებულო</span> არსებული სიტუაციის ფოტო/ვიდეო + 3D რენდერი</li>
+          </ul>
+          <div class="prices">
+            <h4>ვადა და ფასი</h4>
+            <div class="tier"><span class="d">3 დღეში</span><span class="p">1000₾ +18% დღგ</span></div>
+            <div class="tier"><span class="d">10 დღეში</span><span class="p">500₾ +18% დღგ</span></div>
+            <div class="tier"><span class="d">1 თვეში</span><span class="p">უფასო</span></div>
+            <p class="fine">დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური +18% დღგ + ბანკის საკომისიო.</p>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%206%20—%20გრგ%20/%20მრავალფუნქციური">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
+            <a class="btn btn-call" href="tel:+995599120755">დარეკვა</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="scheme" id="scheme-7">
+        <summary><span class="s-num">7</span><span class="s-title">მიწის ტრანშეის გაჭრითი სამუშაოები</span> <span class="badge temp">დროებითი</span></summary>
+        <div class="body">
+          <p class="kv"><span class="k">ვინ ამტკიცებს:</span> მერია და საპატრულო პოლიცია — STS ამზადებს და წარადგენს.</p>
+          <h4>საჭირო მასალები</h4>
+          <ul class="doc-list">
+            <li><span class="tag opt">სურვილისამებრ</span> ტრანშეის გაჭრის ადგილმდებარეობა — ნახაზზე სად, რა სიგანე/სიგრძე, რა არეალი (1 ფაილი, მაქს. 10MB)</li>
+            <li><span class="tag req">სავალდებულო</span> არსებული სიტუაციის ფოტო/ვიდეო + 3D რენდერი</li>
+          </ul>
+          <div class="prices">
+            <h4>ვადა და ფასი — ხანგრძლივობის მიხედვით</h4>
+            <div class="band-label">12 საათამდე</div>
+            <div class="tier"><span class="d">1 დღე</span><span class="p">300₾</span></div>
+            <div class="tier"><span class="d">5 დღე</span><span class="p">150₾</span></div>
+            <div class="tier"><span class="d">10 დღე</span><span class="p">100₾</span></div>
+            <div class="tier"><span class="d">1 თვე</span><span class="p">უფასო</span></div>
+            <div class="band-label">1 კვირამდე (7 დღე)</div>
+            <div class="tier"><span class="d">1 დღე</span><span class="p">500₾</span></div>
+            <div class="tier"><span class="d">5 დღე</span><span class="p">300₾</span></div>
+            <div class="tier"><span class="d">10 დღე</span><span class="p">150₾</span></div>
+            <div class="tier"><span class="d">1 თვე</span><span class="p">უფასო</span></div>
+            <div class="band-label">1 კვირაზე მეტი</div>
+            <div class="tier"><span class="d">1 დღე</span><span class="p">700₾</span></div>
+            <div class="tier"><span class="d">5 დღე</span><span class="p">500₾</span></div>
+            <div class="tier"><span class="d">10 დღე</span><span class="p">300₾</span></div>
+            <div class="tier"><span class="d">1 თვე</span><span class="p">უფასო</span></div>
+            <p class="fine">ყველა ფასს ემატება 18% დღგ. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური + ბანკის საკომისიო.</p>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%207%20—%20მიწის%20ტრანშეა">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
+            <a class="btn btn-call" href="tel:+995599120755">დარეკვა</a>
+          </div>
+        </div>
+      </details>
+
+      <details class="scheme" id="scheme-8">
+        <summary><span class="s-num">8</span><span class="s-title">სხვადასხვა ტიპის კომუნიკაციები</span> <span class="badge temp">დროებითი</span></summary>
+        <div class="body">
+          <p class="kv"><span class="k">მოიცავს:</span> ელ.ენერგია, ბუნებრივი აირი, წყალი, ინტერნეტი.</p>
+          <p class="kv"><span class="k">ვინ ამტკიცებს:</span> მერია და საპატრულო პოლიცია — STS ამზადებს და წარადგენს.</p>
+          <h4>საჭირო მასალები</h4>
+          <ul class="doc-list">
+            <li><span class="tag req">სავალდებულო</span> კომუნიკაციის პროექტი (მაქს. 5 ფაილი)</li>
+          </ul>
+          <div class="prices">
+            <h4>ვადა და ფასი — ხანგრძლივობის მიხედვით</h4>
+            <div class="band-label">12 საათამდე</div>
+            <div class="tier"><span class="d">1 დღე</span><span class="p">300₾</span></div>
+            <div class="tier"><span class="d">5 დღე</span><span class="p">150₾</span></div>
+            <div class="tier"><span class="d">10 დღე</span><span class="p">100₾</span></div>
+            <div class="tier"><span class="d">1 თვე</span><span class="p">უფასო</span></div>
+            <div class="band-label">1 კვირამდე (7 დღე)</div>
+            <div class="tier"><span class="d">1 დღე</span><span class="p">500₾</span></div>
+            <div class="tier"><span class="d">5 დღე</span><span class="p">300₾</span></div>
+            <div class="tier"><span class="d">10 დღე</span><span class="p">150₾</span></div>
+            <div class="tier"><span class="d">1 თვე</span><span class="p">უფასო</span></div>
+            <div class="band-label">1 კვირაზე მეტი</div>
+            <div class="tier"><span class="d">1 დღე</span><span class="p">700₾</span></div>
+            <div class="tier"><span class="d">5 დღე</span><span class="p">500₾</span></div>
+            <div class="tier"><span class="d">10 დღე</span><span class="p">300₾</span></div>
+            <div class="tier"><span class="d">1 თვე</span><span class="p">უფასო</span></div>
+            <p class="fine">ყველა ფასს ემატება 18% დღგ. დაჩქარებული ატვირთვისას ემატება მერიის/საპატრულო პოლიციის საფასური + ბანკის საკომისიო.</p>
+          </div>
+          <p class="warn">⚠️ ამ ტიპს ერთვის დამატებითი ქვე-სექცია (გადახდის/ატვირთვის შემდეგ) — დეტალები დასაზუსტებელია. [დასაზუსტებელია]</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:info@sts.com.ge?subject=სქემა%208%20—%20კომუნიკაციები">ამ დოკუმენტებს ჩვენ მოვამზადებთ — მიიღეთ შეთავაზება</a>
+            <a class="btn btn-call" href="tel:+995599120755">დარეკვა</a>
+          </div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>რატომ STS</h2>
+      <div class="why">
+        <div class="item"><div><span class="b">დადასტურებული გამოცდილება</span> — წლიური ხელშეკრულებები მსხვილ კომუნალურ და ინფრასტრუქტურულ კომპანიებთან</div></div>
+        <div class="item"><div><span class="b">სწრაფი მიწოდება და ხელმისაწვდომი ფასი</span></div></div>
+        <div class="item"><div><span class="b">დასამტკიცებლად მზა დოკუმენტი</span> — მინიმალური შენიშვნებით</div></div>
+        <div class="item"><div><span class="b">პროფესიონალური ხელსაწყოები და გამოცდილი გუნდი</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>როგორ ვმუშაობთ</h2>
+      <ol class="steps">
+        <li>გამოგვიგზავნეთ ობიექტის/მონაკვეთის მონაცემები</li>
+        <li>მიიღებთ ფასსა და ვადებს [1 დღეში]</li>
+        <li>ვამზადებთ სქემას სტანდარტების დაცვით</li>
+        <li>გადმოგცემთ დასამტკიცებლად მზა დოკუმენტს</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>გჭირდებათ საგზაო მოძრაობის ორგანიზების სქემა?</h2>
+      <p>მიიღეთ შეთავაზება დღესვე.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" style="background:#fff;color:var(--navy)" href="mailto:info@sts.com.ge?subject=საგზაო%20მოძრაობის%20ორგანიზების%20სქემა%20—%20შეთავაზების%20მოთხოვნა">შეთავაზების მიღება</a>
+        <a class="btn btn-call" href="tel:+995599120755">დარეკვა</a>
+      </div>
+      <div class="contacts">
+        <span>☎ <a href="tel:+995599120755">+995 599 120 755</a></span>
+        <span>✉ <a href="mailto:info@sts.com.ge">info@sts.com.ge</a></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <h2>ხშირად დასმული კითხვები</h2>
+      <details>
+        <summary>რა განსხვავებაა დროებით და მუდმივ სქემას შორის?</summary>
+        <div class="ans">დროებითი სქემა მოქმედებს სამუშაოების ან ღონისძიების პერიოდში; მუდმივი სქემა — ობიექტის ექსპლუატაციის ვადით.</div>
+      </details>
+      <details>
+        <summary>რამდენ ხანში მზადდება?</summary>
+        <div class="ans">უმეტეს შემთხვევაში [X სამუშაო დღეში].</div>
+      </details>
+      <details>
+        <summary>ვინ ამტკიცებს სქემას?</summary>
+        <div class="ans">მუნიციპალიტეტი ან საავტომობილო გზების დეპარტამენტი — ობიექტისა და გზის სტატუსის მიხედვით. ჩვენ ვამზადებთ დასამტკიცებლად მზა დოკუმენტს.</div>
+      </details>
+      <p class="muted-note">გესაჭიროებათ <a href="https://tia.sts.com.ge/">ტრანსპორტის ზემოქმედების შეფასება (TIA)</a>? იხილეთ ჩვენი ცალკე გვერდი სამშენებლო ნებართვისთვის.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h4>STS — Smart Transportation Solutions</h4>
+      <address class="nap">
+        3/17 Ana Politkovskaia St, Tbilisi 0168<br>
+        ☎ <a href="tel:+995599120755" style="display:inline">+995 599 120 755</a><br>
+        ✉ <a href="mailto:info@sts.com.ge" style="display:inline">info@sts.com.ge</a>
+      </address>
+    </div>
+    <div>
+      <h4>სერვისები</h4>
+      <a href="https://sqema.sts.com.ge/">საგზაო მოძრაობის ორგანიზების სქემა</a>
+      <a href="https://tia.sts.com.ge/">ტრანსპორტის ზემოქმედების შეფასება</a>
+    </div>
+    <div>
+      <h4>კომპანია</h4>
+      <a href="https://sts.com.ge/">sts.com.ge</a>
+      <a href="https://www.linkedin.com/company/stscomge/" rel="noopener" target="_blank">LinkedIn</a>
+      <div class="legal">© STS — Smart Transportation Solutions</div>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://sts.com.ge/#organization",
+  "name": "STS — Smart Transportation Solutions",
+  "url": "https://sts.com.ge/",
+  "logo": "https://sts.com.ge/wp-content/uploads/2025/05/STS-Logo-Dark-Version-v2.png",
+  "image": "https://sts.com.ge/wp-content/uploads/2025/05/STS-Logo-Dark-Version-v2.png",
+  "telephone": "+995599120755",
+  "email": "info@sts.com.ge",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3/17 Ana Politkovskaia St",
+    "addressLocality": "Tbilisi",
+    "postalCode": "0168",
+    "addressCountry": "GE"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 41.7213178, "longitude": 44.7142103 },
+  "areaServed": { "@type": "Country", "name": "Georgia" },
+  "sameAs": ["https://www.linkedin.com/company/stscomge/"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "საგზაო მოძრაობის ორგანიზების სქემა",
+  "provider": { "@id": "https://sts.com.ge/#organization" },
+  "areaServed": { "@type": "Country", "name": "Georgia" },
+  "description": "საგზაო მოძრაობის ორგანიზების სქემა — დროებითი და მუდმივი — სამშენებლო, საგზაო და კომუნიკაციების სამუშაოებისთვის. დასამტკიცებლად მზა დოკუმენტი."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "რა განსხვავებაა დროებით და მუდმივ სქემას შორის?",
+      "acceptedAnswer": { "@type": "Answer", "text": "დროებითი სქემა მოქმედებს სამუშაოების ან ღონისძიების პერიოდში; მუდმივი სქემა — ობიექტის ექსპლუატაციის ვადით." } },
+    { "@type": "Question", "name": "რამდენ ხანში მზადდება?",
+      "acceptedAnswer": { "@type": "Answer", "text": "უმეტეს შემთხვევაში [X სამუშაო დღეში]." } },
+    { "@type": "Question", "name": "ვინ ამტკიცებს სქემას?",
+      "acceptedAnswer": { "@type": "Answer", "text": "მუნიციპალიტეტი ან საავტომობილო გზების დეპარტამენტი — ობიექტისა და გზის სტატუსის მიხედვით. ჩვენ ვამზადებთ დასამტკიცებლად მზა დოკუმენტს." } }
+  ]
+}
+</script>
+
+<script>
+/* Checker = progressive enhancement only. All content lives in the static HTML
+   accordion above; this just opens the chosen type, collapses the rest, scrolls. */
+(function () {
+  var picks = document.querySelectorAll('.pick');
+  var schemes = document.querySelectorAll('.scheme');
+  function activate(id, fromClick) {
+    schemes.forEach(function (d) { d.open = (d.id === id); });
+    picks.forEach(function (b) { b.classList.toggle('active', b.getAttribute('href') === '#' + id); });
+    var target = document.getElementById(id);
+    if (target && fromClick) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  picks.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = btn.getAttribute('href').slice(1);
+      activate(id, true);
+      if (history.replaceState) history.replaceState(null, '', '#' + id);
+    });
+  });
+  // Deep-link support: if the URL already targets a scheme, open it.
+  if (location.hash && document.querySelector('.scheme' + location.hash)) {
+    activate(location.hash.slice(1), false);
+  }
+})();
+</script>
+</body>
+</html>
