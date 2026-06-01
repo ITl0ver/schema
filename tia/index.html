@@ -319,15 +319,14 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
 }
 </script>
 <script>
-/* Hero video = progressive enhancement. Loads only on larger screens with motion
-   allowed and no data-saver; otherwise the poster / brand-dark hero shows. */
+/* Hero video = progressive enhancement. Loads when motion is allowed and no
+   data-saver (incl. mobile); otherwise the poster / brand-dark hero shows. */
 (function () {
   var v = document.querySelector('.hero-video');
   if (!v) return;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var small = window.matchMedia('(max-width: 767px)').matches;
   var save = (navigator.connection || {}).saveData;
-  if (reduce || small || save) return;
+  if (reduce || save) return;
   var s = v.querySelector('source[data-src]');
   if (!s) return;
   s.src = s.getAttribute('data-src');
