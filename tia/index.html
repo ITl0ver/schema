@@ -48,9 +48,15 @@ section:last-of-type{border-bottom:0}
 .nav-links a:hover{color:var(--navy)}
 @media(max-width:640px){.nav-links{display:none}}
 /* hero */
-.hero{background:linear-gradient(180deg,var(--soft),#fff);border-bottom:1px solid var(--line)}
-.hero .wrap{padding-top:54px;padding-bottom:54px}
-.hero p.sub{font-size:1.18rem;color:var(--muted);max-width:48ch}
+.hero{position:relative;overflow:hidden;background:#00031d;color:#fff;min-height:clamp(440px,62vh,640px);display:flex;align-items:center;border-bottom:0}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-video{width:100%;height:100%;object-fit:cover;display:block}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,3,29,.60),rgba(0,3,29,.80))}
+.hero-content{position:relative;z-index:1;padding-top:64px;padding-bottom:64px}
+.hero h1{color:#fff}
+.hero .eyebrow{color:#c7ccd6}
+.hero .btn-call{background:#fff;color:var(--navy)}
+.hero p.sub{font-size:1.18rem;color:#e6e8ee;max-width:48ch}
 .eyebrow{display:inline-block;font-size:.82rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-dk);margin-bottom:14px}
 /* CTA */
 .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
@@ -124,7 +130,13 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
 
 <main>
   <section class="hero">
-    <div class="wrap">
+    <div class="hero-media" aria-hidden="true">
+      <video class="hero-video" muted loop playsinline preload="none" poster="/media/hero.webp">
+        <source data-src="/media/hero.mp4" type="video/mp4">
+      </video>
+      <span class="hero-scrim"></span>
+    </div>
+    <div class="wrap hero-content">
       <span class="eyebrow">STS — Smart Transportation Solutions</span>
       <h1>ტრანსპორტის ზემოქმედების შეფასება (ტზშ)</h1>
       <p class="sub">სამშენებლო ნებართვა შეფერხების გარეშე — სწრაფი, ზუსტი და ხელმისაწვდომი ტრანსპორტის ზემოქმედების შეფასება, რომელსაც მუნიციპალიტეტი პირველივე წარდგენისას ამტკიცებს.</p>
@@ -298,6 +310,24 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
       "acceptedAnswer": { "@type": "Answer", "text": "დიახ. ჩვენი დოკუმენტები მზადდება მოქმედი მოთხოვნების სრული დაცვით, დასამტკიცებლად მზა სახით." } }
   ]
 }
+</script>
+<script>
+/* Hero video = progressive enhancement. Loads only on larger screens with motion
+   allowed and no data-saver; otherwise the poster / brand-dark hero shows. */
+(function () {
+  var v = document.querySelector('.hero-video');
+  if (!v) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var small = window.matchMedia('(max-width: 767px)').matches;
+  var save = (navigator.connection || {}).saveData;
+  if (reduce || small || save) return;
+  var s = v.querySelector('source[data-src]');
+  if (!s) return;
+  s.src = s.getAttribute('data-src');
+  v.load();
+  var p = v.play();
+  if (p && p.catch) p.catch(function () {});
+})();
 </script>
 </body>
 </html>

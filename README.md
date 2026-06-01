@@ -67,8 +67,12 @@ fabricate; replace with real values.
 - **More FAQs (SEO depth):** the SEO spec recommends 5–8 FAQ items per page; the
   supplied verbatim copy has 4 (TIA) and 3 (scheme). Additional client-approved Q&As
   targeting long-tail queries (`რა ღირს`, `როდის სავალდებულო`, `ვინ ამტკიცებს`) would help.
+- **Hero video/poster:** each page's hero is wired for a looping background video but
+  ships without the media files (it falls back to a dark brand panel). Drop `hero.mp4`
+  + `hero.webp` into `tia/media/` and `sqema/media/` — see `*/media/README.md` for the
+  encoding recipe and behavior. Recommended: your own VISSIM/drone footage.
 - **OG/hero image:** `og:image` currently points to the real STS logo on sts.com.ge.
-  A purpose-made share image (WebP, descriptive Latin filename, Georgian alt) is optional.
+  Once you have a hero still, point `og:image` at it (WebP, absolute URL).
 - **hreflang `en`:** omitted by design — add a reciprocal `en` alternate only if a true
   English equivalent page exists on sts.com.ge (coordinate with ITLover).
 
