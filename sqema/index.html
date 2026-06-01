@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32.webp">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.webp">
+<link rel="icon" type="image/webp" sizes="32x32" href="favicon-32.webp">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.webp">
 <title>საგზაო მოძრაობის ორგანიზების სქემა — დროებითი/მუდმივი | STS</title>
 <meta name="description" content="საგზაო მოძრაობის ორგანიზების სქემა (დროებითი და მუდმივი) მშენებლობისა და სამუშაოებისთვის. დასამტკიცებლად მზა, სწრაფად.">
 <link rel="canonical" href="https://sqema.sts.com.ge/">
@@ -18,11 +18,11 @@
 <meta property="og:url" content="https://sqema.sts.com.ge/">
 <meta property="og:image" content="https://sts.com.ge/wp-content/uploads/2025/05/STS-Logo-Dark-Version-v2.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="/fonts/ng-georgian.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ng-georgian.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:'Noto Sans Georgian';font-weight:400 700;font-display:swap;src:url(/fonts/ng-georgian.woff2) format('woff2');unicode-range:U+0589,U+10A0-10FF,U+1C90-1CBA,U+1CBD-1CBF,U+205A,U+2D00-2D2F,U+2E31}
-@font-face{font-family:'Noto Sans Georgian';font-weight:400 700;font-display:swap;src:url(/fonts/ng-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Noto Sans Georgian';font-weight:400 700;font-display:swap;src:url(/fonts/ng-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Noto Sans Georgian';font-weight:400 700;font-display:swap;src:url(fonts/ng-georgian.woff2) format('woff2');unicode-range:U+0589,U+10A0-10FF,U+1C90-1CBA,U+1CBD-1CBF,U+205A,U+2D00-2D2F,U+2E31}
+@font-face{font-family:'Noto Sans Georgian';font-weight:400 700;font-display:swap;src:url(fonts/ng-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Noto Sans Georgian';font-weight:400 700;font-display:swap;src:url(fonts/ng-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 :root{--bg:#fff;--ink:#3c4250;--muted:#7a7a7a;--line:#e8e8ec;--gold:#ed444a;--gold-dk:#cf2e2e;--red:#ed444a;--red-dk:#cf2e2e;--green:#1e9959;--yellow:#ffcd07;--navy:#00031d;--soft:#f6f7f9;--radius:14px;--maxw:1080px}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -154,6 +154,8 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
 .site-footer a:hover{color:var(--gold)}
 .site-footer .nap{font-style:normal}
 .site-footer .legal{border-top:1px solid #2a3242;margin-top:8px;padding-top:18px;color:#7f8a9c}
+.site-footer .linkedin-circle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#0a66c2;color:#fff;margin-bottom:8px}
+.site-footer .linkedin-circle:hover{background:#fff;color:#0a66c2}
 .muted-note{color:var(--muted);font-size:.95rem}
 </style>
 </head>
@@ -161,10 +163,8 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
 <div class="brand-strip" aria-hidden="true"></div>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="https://sts.com.ge/"><img src="/sts-logo.png" width="77" height="38" alt="STS — Smart Transportation Solutions"></a>
-    <nav class="nav-links" aria-label="მთავარი ნავიგაცია">
-      <a href="https://tia.sts.com.ge/">ტრანსპორტის შეფასება</a>
-      <a href="https://sts.com.ge/">sts.com.ge</a>
+    <a class="brand" href="https://sts.com.ge/"><img src="sts-logo.png" width="77" height="38" alt="STS — Smart Transportation Solutions"></a>
+    <nav class="nav-links" aria-label="ტელეფონი">
       <a href="tel:+995577155575">+995 577 15 55 75</a>
       <a href="tel:+995551141484">+995 551 14 14 84</a>
     </nav>
@@ -174,8 +174,8 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
 <main>
   <section class="hero">
     <div class="hero-media" aria-hidden="true">
-      <video class="hero-video" muted loop playsinline preload="none" poster="/media/hero.webp">
-        <source data-src="/media/hero.mp4" type="video/mp4">
+      <video class="hero-video" muted loop playsinline preload="none" poster="media/hero.webp">
+        <source data-src="media/hero.mp4" type="video/mp4">
       </video>
       <span class="hero-scrim"></span>
     </div>
@@ -560,7 +560,7 @@ ul.checks li::before{content:"";position:absolute;left:0;top:.45em;width:16px;he
     <div>
       <h4>კომპანია</h4>
       <a href="https://sts.com.ge/">sts.com.ge</a>
-      <a href="https://www.linkedin.com/company/stscomge/" rel="noopener" target="_blank">LinkedIn</a>
+      <a class="linkedin-circle" href="https://www.linkedin.com/company/stscomge/" rel="noopener" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
       <div class="legal">© STS — Smart Transportation Solutions</div>
     </div>
   </div>
