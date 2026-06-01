@@ -87,7 +87,7 @@ Validate every block in Google Rich Results Test before shipping. Use this real 
   "url": "https://sts.com.ge/",
   "logo": "https://sts.com.ge/wp-content/uploads/2025/05/STS-Logo-Dark-Version-v2.png",
   "image": "https://sts.com.ge/wp-content/uploads/2025/05/STS-Logo-Dark-Version-v2.png",
-  "telephone": "+995599120755",
+  "telephone": "+995577155575",
   "email": "info@sts.com.ge",
   "address": {
     "@type": "PostalAddress",
@@ -192,7 +192,7 @@ Targets: **LCP ≤ 2.5s, INP ≤ 200ms, CLS ≤ 0.1** (mobile, field-data). A ha
 ---
 
 ## 12. Conversion-adjacent SEO
-- `tel:+995599120755` link on the call CTA (mobile click-to-call + counts as a clear action).
+- `tel:+995577155575` link on the call CTA (mobile click-to-call + counts as a clear action).
 - Quote CTA: `mailto:` or an on-page form; if a form, keep it lightweight and not blocking render.
 - Above-the-fold dual CTA improves engagement signals (dwell, low pogo-sticking) which indirectly support ranking.
 

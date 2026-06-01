@@ -65,7 +65,7 @@ later rules as overriding earlier ones **on SEO matters**:
 - **Do not fabricate** prices, phone, email, or legal thresholds. Leave clear `[ ... ]`
   placeholders for unknowns (notably: TIA price line, and scheme types 3 & 8 follow-on
   sub-sections that weren't captured from the source form). Known contacts: phone
-  `+995 599 120 755`, email `info@sts.com.ge`, address `3/17 Ana Politkovskaia St,
+  `+995 577 15 55 75`, email `info@sts.com.ge`, address `3/17 Ana Politkovskaia St,
   Tbilisi 0168`.
 - **Anonymous checker:** the checker collects no personal data. File-upload intake lives
   in a downstream Google Form reached via the CTA.

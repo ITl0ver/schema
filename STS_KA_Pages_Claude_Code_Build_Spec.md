@@ -11,7 +11,7 @@
 3. **Georgian only.** All visible text in Georgian. Use a Georgian-friendly web font (e.g. Noto Sans Georgian) so glyphs render consistently.
 4. Use the body copy in the companion file `STS_Georgian_LandingPages_and_Ads.md` verbatim for the TIA page and the scheme page prose. Do not rewrite or re-translate.
 5. **SEO is the priority.** Read `STS_SEO_Technical_Spec.md` — it is the authoritative source on ALL SEO matters and overrides this file wherever they conflict. The build must pass its acceptance checklist.
-6. **Do not fabricate** prices, phone, email, or legal thresholds beyond what's given here. Where a value is unknown leave a clear `[ ... ]` placeholder. Known contacts: phone `+995 599 120 755`, email `info@sts.com.ge`, address `3/17 Ana Politkovskaia St, Tbilisi 0168`.
+6. **Do not fabricate** prices, phone, email, or legal thresholds beyond what's given here. Where a value is unknown leave a clear `[ ... ]` placeholder. Known contacts: phone `+995 577 15 55 75`, email `info@sts.com.ge`, address `3/17 Ana Politkovskaia St, Tbilisi 0168`.
 7. Propose the file structure first, then build.
 
 ---
