@@ -1,0 +1,5 @@
+# Local tooling and source media — not part of the deployed site
+_tools/
+Clip.mp4
+*.mov
+*.mkv
